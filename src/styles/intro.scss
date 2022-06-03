@@ -1,0 +1,89 @@
+main.intro {
+    width: 80%;
+    max-width: 550px;
+    min-width: 300px;
+    margin: 0 auto;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    h1.intro--header {
+        font-weight: 700;
+        font-size: 40px;
+        color: #ffffff;
+        margin-bottom: 10px;
+    }
+    p.intro--description {
+        font-size: 20px;
+        font-weight: 400;
+        text-align: center;
+        color: #f0f0f0;
+        margin-bottom: 50px;
+    }
+
+    form.game--options {
+        color: #f0f0f0;
+
+        div.input--group {
+            display: flex;
+            flex-direction: column;
+            margin: 15px 0;
+
+            input.option--selector,
+            select.option--selector {
+                padding: 6px 20px;
+                text-align: center;
+                font-size: 16px;
+                border-radius: 8px;
+                color: #4d5b9e;
+                font-weight: 600;
+                background-color: #f0f0f0;
+                box-shadow: var(--boxshadowOutside);
+
+                &:hover {
+                    box-shadow: var(--boxshadowInside);
+                }
+
+                &:active {
+                    box-shadow: var(--boxshadowInside);
+                }
+            }
+
+            label.input--label {
+                margin-bottom: 10px;
+                font-size: 18px;
+            }
+
+            select.option--selector {
+                appearance: none;
+
+                option.category,
+                option.difficulty {
+                    font-size: 16px;
+                    font-weight: 600;
+                }
+            }
+        }
+    }
+
+    button.intro--btn {
+        margin: 15px 0;
+        background-color: #94d7a2;
+        color: #4d5b9e;
+        font-size: 18px;
+        font-weight: 700;
+        padding: 10px 20px;
+        border-radius: 10px;
+        box-shadow: var(--boxshadowOutside);
+
+        &:hover {
+            box-shadow: var(--boxshadowInside);
+        }
+
+        &:active {
+            box-shadow: var(--boxshadowInside);
+        }
+    }
+}

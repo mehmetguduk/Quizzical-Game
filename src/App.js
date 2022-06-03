@@ -1,25 +1,45 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react"
+import { nanoid } from "nanoid"
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import Intro from "./components/Intro"
+import Quiz from "./components/Quiz"
+import Background from "./components/Background"
+import shuffle from "./functions/Shuffle.js"
+
+import "./styles/style.scss"
+import "./styles/intro.scss"
+import "./styles/quiz.scss"
+import "./styles/background.scss"
+
+export default function App() {
+    const [isPlaying, setIsPlaying] = React.useState(false)
+    const [questions, setQuestions] = React.useState([])
+    
+    async function startQuiz(apiUrl) {
+        setIsPlaying(true)
+        setQuestions([])
+        const res = await fetch(apiUrl)
+        const data = await res.json()
+        const questionsData = data.results.map(item => {
+            const { category, type, difficulty, question, correct_answer, incorrect_answers } = item
+            return {
+                id: nanoid(),
+                category: category,
+                type: type,
+                difficulty: difficulty,
+                question: question,
+                answers: shuffle([correct_answer, ...incorrect_answers]),
+                correctAnswer: correct_answer
+            }
+        })
+        setQuestions(questionsData)
+    }
+
+    return (
+        <>
+            {!isPlaying && <Intro startQuiz={startQuiz} />}
+            {isPlaying && !!questions.length && <Quiz questions={questions} setIsPlaying={setIsPlaying} startQuiz={startQuiz} />}
+            <Background />
+        </>
+    )
 }
-
-export default App;
