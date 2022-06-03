@@ -77,7 +77,7 @@ export default function Quiz({ questions, setIsPlaying, startQuiz }) {
                     {
                         isChecked &&
                         <div className="logo--buttons">
-                            <a className="quiz--btn twitter" rel="noreferrer" target="_blank" href={`https://twitter.com/intent/tweet?text=I%20scored%20${getScore()}%20on%20Quizzical!%0Ahttps%3A//quizzical-mg.netlify.app/`}>
+                            <a className="quiz--btn twitter" rel="noreferrer" target="_blank" href={`https://twitter.com/intent/tweet?text=I%20scored%20${getScore()}%20on%20Quizzical!%0Ahttps%3A//quizzical-game-mg.netlify.app/`}>
                                 <i className="fa fa-twitter" aria-hidden="true"></i>
                             </a>
                             <button className="quiz--btn play--again" onClick={backToMenu}><i className="fa fa-undo" aria-hidden="true"></i></button>
