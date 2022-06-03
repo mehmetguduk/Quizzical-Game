@@ -1,3 +1,9 @@
+/*
+    THIS FILE WAS DEVELOPED BY MEHMET GUDUK
+    © 2022 COPYRIGHT, LICENSED WITH GPL-3.0 LICENSE, AUTHOR IS MEHMET GUDUK
+    https://github.com/mehmetguduk
+*/
+
 main.intro {
     width: 80%;
     max-width: 550px;
@@ -13,7 +19,7 @@ main.intro {
         font-weight: 700;
         font-size: 40px;
         color: #ffffff;
-        margin-bottom: 10px;
+        margin: 20px 0 10px 0;
     }
     p.intro--description {
         font-size: 20px;
@@ -69,7 +75,7 @@ main.intro {
     }
 
     button.intro--btn {
-        margin: 15px 0;
+        margin: 35px 0 20px 0;
         background-color: #94d7a2;
         color: #4d5b9e;
         font-size: 18px;

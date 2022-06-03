@@ -6,15 +6,16 @@ import Quiz from "./components/Quiz"
 import Background from "./components/Background"
 import shuffle from "./functions/Shuffle.js"
 
-import "./styles/style.scss"
-import "./styles/intro.scss"
-import "./styles/quiz.scss"
-import "./styles/background.scss"
+import "./styles/Style.scss"
+import "./styles/Intro.scss"
+import "./styles/Quiz.scss"
+import "./styles/Background.scss"
+import Copyright from "./components/Copyright"
 
 export default function App() {
     const [isPlaying, setIsPlaying] = React.useState(false)
     const [questions, setQuestions] = React.useState([])
-    
+
     async function startQuiz(apiUrl) {
         setIsPlaying(true)
         setQuestions([])
@@ -40,6 +41,7 @@ export default function App() {
             {!isPlaying && <Intro startQuiz={startQuiz} />}
             {isPlaying && !!questions.length && <Quiz questions={questions} setIsPlaying={setIsPlaying} startQuiz={startQuiz} />}
             <Background />
+            <Copyright />
         </>
     )
 }

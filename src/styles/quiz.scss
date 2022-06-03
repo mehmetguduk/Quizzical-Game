@@ -1,3 +1,9 @@
+/*
+    THIS FILE WAS DEVELOPED BY MEHMET GUDUK
+    © 2022 COPYRIGHT, LICENSED WITH GPL-3.0 LICENSE, AUTHOR IS MEHMET GUDUK
+    https://github.com/mehmetguduk
+*/
+
 main.quiz {
     display: flex;
     flex-direction: column;
@@ -5,7 +11,7 @@ main.quiz {
     max-width: 550px;
     min-width: 300px;
     margin: 5px auto 0 auto;
-    padding: 40px 0px 35px;
+    padding: 40px 0 50px 0;
 
     div.question {
         border-bottom: 1px solid #dbdef0;

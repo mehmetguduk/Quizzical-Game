@@ -1,9 +1,14 @@
+/*
+    THIS FILE WAS DEVELOPED BY MEHMET GUDUK
+    © 2022 COPYRIGHT, LICENSED WITH GPL-3.0 LICENSE, AUTHOR IS MEHMET GUDUK
+    https://github.com/mehmetguduk
+*/
+
 @import url("https://fonts.googleapis.com/css2?family=Karla:wght@400;500;600;700&display=swap");
 
 :root {
     --boxshadowOutside: 0px 0px 20px -3px rgba(0, 0, 0, 0.25);
     --boxshadowInside: inset 0px 0px 20px -3px rgba(0, 0, 0, 0.25);
-    
 }
 
 * {
@@ -36,3 +41,21 @@ select {
     border: none;
 }
 
+footer.copyright {
+    position: absolute;
+    bottom: 4px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    padding: 0 20px;
+    
+    p.copyright--text {
+        text-align: center;
+        color: #f0f0f0;
+        font-size: 13px;
+
+        a.copyright--link {
+            color: #f0f0f0;
+        }
+    }
+}
