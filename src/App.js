@@ -6,10 +6,10 @@ import Quiz from "./components/Quiz"
 import Background from "./components/Background"
 import shuffle from "./functions/Shuffle.js"
 
-import "./styles/Style.scss"
-import "./styles/Intro.scss"
-import "./styles/Quiz.scss"
-import "./styles/Background.scss"
+import "./styles/style.scss"
+import "./styles/intro.scss"
+import "./styles/quiz.scss"
+import "./styles/background.scss"
 import Copyright from "./components/Copyright"
 
 export default function App() {
